@@ -9,6 +9,7 @@
         :name="name"
         :placeholder="title"
         :required="required"
+        @input="sanitizePhoneNumber"
       />
     </div>
   </div>
@@ -54,6 +55,12 @@ export default {
   methods: {
     lowercase(str) {
       return str.toLowerCase()
+    },
+    sanitizePhoneNumber(event) {
+      if (this.type === 'tel') {
+        this.model = event.target.value.replace(/[^\d+(). -]/g, '')
+        this.$forceUpdate()
+      }
     },
   },
 }

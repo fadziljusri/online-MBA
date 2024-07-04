@@ -2,7 +2,7 @@
   <nav id="navbar" class="relative z-10 w-full text-neutral-800" :class="{ 'sticky top-0 bg-white shadow': sticky }">
     <div class="flex items-center justify-end px-8 py-1 text-white bg-blue-gradient lg:hidden">
       <img :src="require('~/assets/img/icons/phone.svg')" class="w-4 h-4 mr-1 bg-white rounded" />
-      <div>Call for details <a href="tel:" class="text-white underline">+6019-379 2803</a></div>
+      <div>Call for details <a href="tel:+60193792803" class="text-white underline">+6019-379 2803</a></div>
     </div>
     <div class="flex flex-col max-w-screen-xl px-8 mx-auto lg:py-4 lg:items-center lg:justify-between lg:flex-row">
       <div class="flex flex-col items-center space-x-4 lg:flex-row xl:space-x-8">
