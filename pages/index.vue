@@ -9,7 +9,7 @@
             data-aos-once="true"
             data-aos-duration="1000"
             class="text-base font-bold text-gradient"
-            >Postgraduate Study <span class="ml-6 font-normal">100% Online</span></span
+            >Postgraduate Study <br class="md:hidden"> <span class="ml-0 font-normal md:ml-6">100% Online</span></span
           >
           <h1
             data-aos="zoom-in-right"
@@ -102,11 +102,11 @@
     </section>
 
     <!-- Course Section -->
-    <section class="relative max-w-full py-16 my-20 overflow-hidden shadow bg-course-section sm:mx-4 rounded-2xl">
+    <section class="relative max-w-full my-20 overflow-hidden shadow md:py-16 bg-course-section sm:mx-4 rounded-2xl">
       <div class="relative grid max-w-screen-xl grid-cols-12 px-4 mx-auto sm:px-2 gap-x-6">
         <div class="max-w-screen-md col-span-12 px-4 mx-auto mt-8 sm:px-6">
           <!-- Course Overview -->
-          <div id="course-overview" class="pt-32 space-y-8 sm:space-y-6">
+          <div id="course-overview" class="pt-32 md:space-y-8 sm:space-y-6">
             <h2 data-aos="fade-up" class="text-4xl font-semibold text-header-gradient">Course Overview</h2>
             <div class="space-y-6">
               <p data-aos="fade-up" class="text-sm paragraph xl:text-base">
@@ -297,7 +297,7 @@
             <BaseButton
               class="max-w-full px-6 py-4 bg-inherit text-gradient border border-[#0c66ee] flex items-center justify-center"
             >
-              <a href="tel:+6010193792803" class="flex items-center">
+              <a href="tel:+60193792803" class="flex items-center">
                 <img :src="require('~/assets/img/icons/phone.svg')" class="w-6 h-6 mr-2 rounded-lg" />
                 Schedule a Call
               </a>

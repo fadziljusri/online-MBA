@@ -19,9 +19,9 @@
           :class="[open ? 'flex' : 'hidden lg:flex']"
           class="flex flex-col flex-grow w-full h-auto pb-4 space-y-3 duration-300 origin-top lg:items-center lg:pb-0 lg:justify-end lg:flex-row xl:space-x-2 lg:space-y-0"
         >
-          <NavLink name="Overview" url="#course-overview" />
+          <NavLink name="Course Overview" url="#course-overview" />
           <NavLink name="Key Facts" url="#key-facts" />
-          <NavLink name="Structure" url="#course-structure" />
+          <NavLink name="Course Structure" url="#course-structure" />
           <NavLink name="Requirements" url="#entry-requirements" />
           <NavLink name="Intakes" url="#intake-dates" />
           <NavLink name="Lecturer" url="#lecturer" />
@@ -99,19 +99,19 @@ export default {
       this.openAtPosY = this.open ? window.scrollY : 0
     },
     openTel() {
-      window.location.href = 'tel:+6010193792803'
+      window.location.href = 'tel:+60193792803'
     },
     handleScroll() {
       // Check scroll position
       if (window.scrollY >= this.scrollThreshold && !this.sticky) {
         this.sticky = true
-        this.open = false
+        // this.open = false
       } else if (window.scrollY < 5 && this.sticky) {
         // Undo action when scrolled back to top
         this.sticky = false
-        this.open = false
+        // this.open = false
       } else if (this.openAtPosY && Math.abs(this.openAtPosY - window.scrollY) >= 10) {
-        this.open = false
+        // this.open = false
       }
     },
   },

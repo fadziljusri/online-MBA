@@ -1,5 +1,5 @@
 <template>
-  <a href="https://api.whatsapp.com/send?phone=6010193792803&text=Online%20MBA" class="float" target="_blank">
+  <a href="https://api.whatsapp.com/send?phone=60193792803&text=Online%20MBA" class="float" target="_blank">
     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
       <path
         fill="#fff"
