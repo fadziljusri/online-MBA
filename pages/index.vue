@@ -9,7 +9,8 @@
             data-aos-once="true"
             data-aos-duration="1000"
             class="text-base font-bold text-gradient"
-            >Postgraduate Study <br class="md:hidden"> <span class="ml-0 font-normal md:ml-6">100% Online</span></span
+            >Postgraduate Study <br class="md:hidden" />
+            <span class="ml-0 font-normal md:ml-6">100% Online</span></span
           >
           <h1
             data-aos="zoom-in-right"
@@ -95,8 +96,18 @@
             <a href="/privacy policy" class="underline text-gradient">privacy policy.</a>
           </div>
         </div>
-        <div data-aos="zoom-in-left" class="col-span-12 px-4 mt-4 space-y-6 lg:col-span-6 xl:mt-20">
-          <LandingForm />
+        <div data-aos="zoom-in-left" class="col-span-12 mt-4 space-y-6 lg:px-4 lg:col-span-6 xl:mt-20">
+          <LandingForm v-if="false" />
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSeVgAFWkIIOji9LCjI1l-BJL4WesM8OU8p-6T3uWr4-Xkfl1g/viewform?embedded=true"
+            width="100%"
+            height="600"
+            frameborder="1"
+            marginheight="0"
+            marginwidth="0"
+            style="margin-top: 0"
+            >Loading…</iframe
+          >
         </div>
       </BaseSection>
     </section>
