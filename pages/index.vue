@@ -3,7 +3,7 @@
     <!-- Hero section -->
     <section id="hero" class="w-full pb-24">
       <BaseSection>
-        <div class="col-span-12 px-6 mt-12 space-y-4 text-center lg:col-span-8 xl:mt-10 sm:space-y-6 sm:text-left">
+        <div class="col-span-12 mt-12 space-y-4 text-center lg:px-6 lg:col-span-8 xl:mt-10 sm:space-y-6 sm:text-left">
           <span
             data-aos="zoom-in"
             data-aos-once="true"
