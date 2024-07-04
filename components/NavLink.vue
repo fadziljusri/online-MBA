@@ -4,6 +4,7 @@
       v-smooth-scroll
       class="w-full md:px-4 py-2 text-sm bg-transparent rounded-lg text-[#666666] hover:text-gray-900 focus:outline-none focus:shadow-outline whitespace-nowrap"
       :href="url"
+      @click="$emit('click')"
     >
       {{ name }}
     </a>

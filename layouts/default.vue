@@ -2,7 +2,7 @@
   <div id="top" class="relative min-h-screen font-sans antialiased">
     <div class="relative">
       <div
-        class="absolute top-0 left-0 w-full h-[100vh] sm:h-[100vh] md:h-[70vh] lg:h-[80vh] cover-gradient-2 sm:cover-gradient"
+        class="absolute top-0 left-0 w-full h-[100vh] sm:h-[100vh] md:h-[70vh] lg:h-[75vh] cover-gradient-2 sm:cover-gradient"
       ></div>
       <BaseNavbar />
 

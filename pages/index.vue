@@ -106,7 +106,7 @@
       <div class="relative grid max-w-screen-xl grid-cols-12 px-4 mx-auto sm:px-2 gap-x-6">
         <div class="max-w-screen-md col-span-12 px-4 mx-auto mt-8 sm:px-6">
           <!-- Course Overview -->
-          <div id="course-overview" class="pt-32 md:space-y-8 sm:space-y-6">
+          <div id="course-overview" class="pt-28 lg:pt-32 md:space-y-8 sm:space-y-6">
             <h2 data-aos="fade-up" class="text-4xl font-semibold text-header-gradient">Course Overview</h2>
             <div class="space-y-6">
               <p data-aos="fade-up" class="text-sm paragraph xl:text-base">
@@ -132,7 +132,7 @@
           </div>
 
           <!-- Key Facts -->
-          <div id="key-facts" class="pt-32 space-y-8 sm:space-y-6">
+          <div id="key-facts" class="space-y-8 pt-28 lg:pt-32 sm:space-y-6">
             <h2 data-aos="fade-up" class="text-4xl font-semibold text-header-gradient">Key Facts</h2>
             <div data-aos="fade-up" class="space-y-6">
               <LandingKeyFacts :datasets="keyFactsAll" class="grid-cols-1 md:grid-cols-3" />
@@ -140,7 +140,7 @@
           </div>
 
           <!-- Course Structure -->
-          <div id="course-structure" class="pt-32 space-y-8 sm:space-y-6">
+          <div id="course-structure" class="space-y-8 pt-28 lg:pt-32 sm:space-y-6">
             <h2 data-aos="fade-up" class="text-4xl font-semibold text-header-gradient">Course Structure</h2>
             <div class="space-y-6">
               <p data-aos="fade-up" class="text-sm paragraph xl:text-base">
@@ -155,7 +155,7 @@
           <!-- TODO: ??? -->
 
           <!-- Entry Requirements -->
-          <div id="entry-requirements" class="pt-32 space-y-8 sm:space-y-6">
+          <div id="entry-requirements" class="space-y-8 pt-28 lg:pt-32 sm:space-y-6">
             <h2 data-aos="fade-up" class="text-4xl font-semibold text-header-gradient">Entry Requirements</h2>
             <div class="space-y-6">
               <p data-aos="fade-up" class="text-sm paragraph xl:text-base">
@@ -211,7 +211,7 @@
           </div>
 
           <!-- Intake Dates -->
-          <div id="intake-dates" class="pt-32 space-y-8 sm:space-y-6">
+          <div id="intake-dates" class="space-y-8 pt-28 lg:pt-32 sm:space-y-6">
             <h2 data-aos="fade-up" class="text-4xl font-semibold text-header-gradient">Intake Dates</h2>
             <div class="space-y-6">
               <p data-aos="fade-up" class="text-sm paragraph xl:text-base">
@@ -232,7 +232,7 @@
           </div>
 
           <!-- Lecturer -->
-          <div id="lecturer" class="pt-32 space-y-8 sm:space-y-6">
+          <div id="lecturer" class="space-y-8 pt-28 lg:pt-32 sm:space-y-6">
             <h2 data-aos="fade-up" class="text-4xl font-semibold text-header-gradient">Lecturer</h2>
             <div class="space-y-6">
               <p data-aos="fade-up" class="text-sm paragraph xl:text-base">
@@ -254,7 +254,7 @@
           </div>
 
           <!-- FAQs -->
-          <div id="faqs" data-aos="fade-up" data-aos-easing="linear" class="col-span-12 pt-32">
+          <div id="faqs" data-aos="fade-up" data-aos-easing="linear" class="col-span-12 pt-28 lg:pt-32">
             <h2 class="mb-10 text-3xl font-semibold sm:text-4xl sm:mb-6">Frequently asked questions</h2>
 
             <ul class="shadow-box">
