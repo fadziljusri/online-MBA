@@ -92,9 +92,9 @@
         <div data-aos="zoom-in-left" class="col-span-12 mt-4 space-y-6 lg:px-4 lg:col-span-6 xl:mt-20">
           <LandingForm v-if="false" />
           <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSeVgAFWkIIOji9LCjI1l-BJL4WesM8OU8p-6T3uWr4-Xkfl1g/viewform?embedded=true"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfIJ-s_uq0h56WlC-we4nSfZ-0lnj0fy2lftSv7hBadyJQ9Ew/viewform?embedded=false"
             width="100%"
-            height="850"
+            height="810"
             frameborder="1"
             marginheight="0"
             marginwidth="0"
@@ -156,7 +156,7 @@
 
           <!-- Entry Requirements -->
           <div id="entry-requirements" class="space-y-8 pt-28 lg:pt-32 sm:space-y-6">
-            <h2 data-aos="fade-up" class="text-4xl font-semibold text-header-gradient">Entry Requirements</h2>
+            <h2 data-aos="fade-up" class="text-4xl font-semibold text-header-gradient">{{ $t('Syarat kemasukan') }}</h2>
             <div class="space-y-6">
               <ol class="ml-6 space-y-4 list-decimal sm:space-y-2">
                 <li data-aos="fade-up" class="text-sm paragraph xl:text-base">
@@ -334,7 +334,7 @@ export default {
         },
         {
           text: this.$t('Tempoh'),
-          label: '12 months',
+          label: this.$t('12 bulan'),
           img: 'calendar.svg',
         },
         {
