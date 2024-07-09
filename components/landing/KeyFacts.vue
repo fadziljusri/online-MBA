@@ -36,6 +36,8 @@ export default {
 <style scoped>
 .circle-icon {
   width: 60px; /* Adjust this value to set the square size */
+  min-width: 60px;
+  max-width: 60px;
   height: 60px; /* Same as width to make it square */
   overflow: hidden; /* Ensure content doesn't overflow */
   position: relative; /* Needed for absolute positioning */

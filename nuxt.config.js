@@ -3,7 +3,7 @@ import { keywords } from "./static";
 export default {
   ssr: false,
   head: {
-    title: '100% Self-paced, Online MBA | Faizal Jusri',
+    title: 'Dapatkan MBA! 100% online, 100% di tangan anda!',
     htmlAttrs: {
       lang: 'en',
     },
@@ -26,7 +26,19 @@ export default {
   plugins: ['~/plugins/smooth-scroll.js', '~/plugins/mdi.js'],
   components: true,
   buildModules: ['@nuxtjs/eslint-module', '@nuxt/postcss8'],
-  modules: [],
+  modules: ['nuxt-i18n'],
+  i18n: {
+    locales: ['ms', 'en'],
+    defaultLocale: 'ms',
+    vueI18n: {
+      fallbackLocale: 'ms',
+      messages: {
+        ms: require('./locales/ms.json'),
+        en: require('./locales/en.json')
+      }
+    },
+    strategy: 'no_prefix', // Set strategy to 'no_prefix' - url fixed
+  },
   build: {
     postcss: {
       plugins: {

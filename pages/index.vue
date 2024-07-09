@@ -22,7 +22,7 @@
             <br /><span class="text-header-gradient">Business Administration</span>
           </h1>
           <p data-aos="zoom-in" data-aos-once="true" data-aos-delay="300" class="hidden paragraph sm:block">
-            Advance in your career with a 100% online, self-paced MBA.
+            {{ $t('Dapatkan MBA! 100% online, 100% di tangan anda!') }}
           </p>
         </div>
         <div class="hidden col-span-12 lg:block lg:col-span-4">
@@ -78,30 +78,23 @@
       <BaseSection>
         <div data-aos="zoom-in-right" class="col-span-12 px-4 mt-4 space-y-6 lg:col-span-6 xl:mt-20">
           <h2 class="text-4xl font-semibold sm:pr-8 xl:pr-12">
-            Download a <br class="hidden sm:block" />
-            Programme Guide
+            {{ $t('Muat Turun') }} <br class="hidden sm:block" />
+            {{ $t('Panduan Program') }}
           </h2>
-          <p class="paragraph">Explore more details of the programme here, including:</p>
+          <p class="paragraph">Dapatkan maklumat lanjut program, termasuk:</p>
 
           <ul class="grid grid-cols-1 gap-1 md:grid-cols-2">
-            <LandingListItem title="Course Structure" />
-            <LandingListItem title="Fees" />
-            <LandingListItem title="Learning Outcomes" />
-            <LandingListItem title="Entry Requirements" />
+            <LandingListItem :title="$t('Yuran')" />
+            <LandingListItem :title="$t('Hasil Pembelajaran')" />
+            <LandingListItem :title="$t('Syarat Kemasukan')" />
           </ul>
-
-          <div class="text-xs text-justify text-gray-500">
-            *By submitting this form you acknowledge HELP University will collect your personal information (including
-            your name and email address) to respond to your enquiry. To learn more, refer to our
-            <a href="/privacy policy" class="underline text-gradient">privacy policy.</a>
-          </div>
         </div>
         <div data-aos="zoom-in-left" class="col-span-12 mt-4 space-y-6 lg:px-4 lg:col-span-6 xl:mt-20">
           <LandingForm v-if="false" />
           <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLSeVgAFWkIIOji9LCjI1l-BJL4WesM8OU8p-6T3uWr4-Xkfl1g/viewform?embedded=true"
             width="100%"
-            height="600"
+            height="850"
             frameborder="1"
             marginheight="0"
             marginwidth="0"
@@ -117,167 +110,118 @@
       <div class="relative grid max-w-screen-xl grid-cols-12 px-4 mx-auto sm:px-2 gap-x-6">
         <div class="max-w-screen-md col-span-12 px-4 mx-auto mt-8 sm:px-6">
           <!-- Course Overview -->
-          <div id="course-overview" class="pt-28 lg:pt-32 md:space-y-8 sm:space-y-6">
-            <h2 data-aos="fade-up" class="text-4xl font-semibold text-header-gradient">Course Overview</h2>
+          <div id="course-overview" class="space-y-8 pt-28 lg:pt-32 sm:space-y-6">
+            <h2 data-aos="fade-up" class="text-4xl font-semibold text-header-gradient">
+              {{ $t('Ringkasan Program') }}
+            </h2>
             <div class="space-y-6">
               <p data-aos="fade-up" class="text-sm paragraph xl:text-base">
-                Empower your journey towards your career and personal goals with Master of Business Administration
-                Online – a fully accredited, globally accessible programme tailored for professionals.
+                {{
+                  $t(
+                    'Kejayaan di tangan anda, dengan program MBA dalam talian yang fleksibel sepenuhnya. Direka untuk profesional yang bekerja, kursus ini membolehkan anda mengimbangi pengajian anda dengan kerjaya dan kehidupan peribadi anda dengan mudah.'
+                  )
+                }}
               </p>
-              <p data-aos="fade-up" class="text-sm paragraph xl:text-base">
-                The comprehensive syllabus is designed to cultivate competence, confidence, and career competitiveness.
-                Covering the fundamentals of management, economics, analytics, and more, it will be taught by industry
-                experts and the accomplished HELP University. By the end of the programme, successful graduates will be
-                well-equipped to lead in even the most rapidly-changing and unpredictable of business environments.
-              </p>
-              <p data-aos="fade-up" class="text-sm paragraph xl:text-base">
-                Mirroring the conventional MBA, it has a 12-module structure for students to complete the course in 2
-                years, with maximum candidature of 3 years.
-              </p>
-              <p data-aos="fade-up" class="text-sm paragraph xl:text-base">
-                Is time your biggest enemy? Not when our MBA is 100% online with a self-paced learning mode. Students
-                can access study materials remotely anytime, ​anywhere and take full control of their time with zero
-                scheduled classes.
-              </p>
+              <ol class="ml-6 space-y-4 list-decimal sm:space-y-2">
+                <li data-aos="fade-up" class="text-sm paragraph xl:text-base">
+                  {{
+                    $t(
+                      '1 Bulan, 1 Modul: Fokus secara intensif pada satu modul setiap bulan, memudahkan pengurusan masa anda dan penyerapan bahan secara menyeluruh.'
+                    )
+                  }}
+                </li>
+                <li data-aos="fade-up" class="text-sm paragraph xl:text-base">
+                  {{ $t('Intake Setiap Bulan: Mulakan perjalanan MBA anda bila-bila masa') }}
+                </li>
+                <li data-aos="fade-up" class="text-sm paragraph xl:text-base">
+                  {{
+                    $t(
+                      'Bayaran Per Modul: Nikmati fleksibiliti membayar satu modul pada satu masa dengan harga yang kompetitif.'
+                    )
+                  }}
+                </li>
+              </ol>
             </div>
           </div>
 
           <!-- Key Facts -->
           <div id="key-facts" class="space-y-8 pt-28 lg:pt-32 sm:space-y-6">
-            <h2 data-aos="fade-up" class="text-4xl font-semibold text-header-gradient">Key Facts</h2>
+            <h2 data-aos="fade-up" class="text-4xl font-semibold text-header-gradient">
+              {{ $t('Fakta Utama') }}
+            </h2>
             <div data-aos="fade-up" class="space-y-6">
               <LandingKeyFacts :datasets="keyFactsAll" class="grid-cols-1 md:grid-cols-3" />
             </div>
           </div>
 
-          <!-- Course Structure -->
-          <div id="course-structure" class="space-y-8 pt-28 lg:pt-32 sm:space-y-6">
-            <h2 data-aos="fade-up" class="text-4xl font-semibold text-header-gradient">Course Structure</h2>
-            <div class="space-y-6">
-              <p data-aos="fade-up" class="text-sm paragraph xl:text-base">
-                A comprehensive 12-module programme that covers study areas such as business management, research,
-                analytics, leadership, and more.
-              </p>
-              <!-- TODO: -->
-              TODO:
-            </div>
-          </div>
-
-          <!-- TODO: ??? -->
-
           <!-- Entry Requirements -->
           <div id="entry-requirements" class="space-y-8 pt-28 lg:pt-32 sm:space-y-6">
             <h2 data-aos="fade-up" class="text-4xl font-semibold text-header-gradient">Entry Requirements</h2>
             <div class="space-y-6">
-              <p data-aos="fade-up" class="text-sm paragraph xl:text-base">
-                Explore straightforward entry requirements that make joining our MBA Online programme seamless.
-              </p>
-
-              <ul class="ml-6 space-y-4 sm:space-y-2">
-                <LandingListItem
-                  data-aos="fade-up"
-                  title="A Bachelor's degree (MQF Level 6) in related fields with a minimum CGPA of 2.50, OR"
-                />
-                <LandingListItem
-                  data-aos="fade-up"
-                  title="A Bachelor's degree in related fields with a minimum CGPA of 2.00, subject to rigorous internal assessment, OR"
-                />
-                <LandingListItem
-                  data-aos="fade-up"
-                  title="A Bachelor's degree in non-related fields with a minimum CGPA of 2.00 and with relevant working experience, subject to rigorous internal assessment, OR"
-                />
-              </ul>
-
-              <p data-aos="fade-up" class="text-sm paragraph xl:text-base">
-                <b>
-                  For non-related fields bachelor's degree holders (min. CGPA of 2.00) without relevant working
-                  experience:
-                </b>
-              </p>
-
-              <p data-aos="fade-up" class="text-sm paragraph xl:text-base">
-                Apply for our <b>complimentary 2-week prerequisite study</b> of business and management, and start your
-                <b>MBA Online</b> in no time! Speak to our Education Counsellors to find out
-                <a href="#" class="underline text-gradient">more (todo: link to whatsapp)</a>.
-              </p>
-
-              <p data-aos="fade-up" class="text-sm paragraph xl:text-base">
-                <b> For Malaysian non-degree holders with at least a Diploma or STPM certificate: </b>
-              </p>
-
-              <p data-aos="fade-up" class="text-sm paragraph xl:text-base">
-                Obtain the MQA Accreditation of Prior Experiential Learning, APEL.A certificate for approved course
-                admission.
-              </p>
-
-              <p data-aos="fade-up" class="text-sm paragraph xl:text-base">
-                <b> For international applicants: </b>
-              </p>
-
-              <p data-aos="fade-up" class="text-sm paragraph xl:text-base">
-                Require English proficiency in terms of MUET Band 4, or CEFR (MidB2), IELTS 6.0, or other language
-                proficiency equivalencies.
-              </p>
-            </div>
-          </div>
-
-          <!-- Intake Dates -->
-          <div id="intake-dates" class="space-y-8 pt-28 lg:pt-32 sm:space-y-6">
-            <h2 data-aos="fade-up" class="text-4xl font-semibold text-header-gradient">Intake Dates</h2>
-            <div class="space-y-6">
-              <p data-aos="fade-up" class="text-sm paragraph xl:text-base">
-                Our 100% online, self-paced MBA Online champions flexible learning with various entry points throughout
-                the year, enabling you to embark on your journey based on your schedule.
-              </p>
-
-              <p data-aos="fade-up" class="text-sm paragraph xl:text-base">There are 5 intakes per year:</p>
-
-              <ul class="ml-6 space-y-4 sm:space-y-2">
-                <LandingListItem data-aos="fade-up" title="January" />
-                <LandingListItem data-aos="fade-up" title="February" />
-                <LandingListItem data-aos="fade-up" title="March" />
-                <LandingListItem data-aos="fade-up" title="April" />
-                <LandingListItem data-aos="fade-up" title="May" />
-              </ul>
+              <ol class="ml-6 space-y-4 list-decimal sm:space-y-2">
+                <li data-aos="fade-up" class="text-sm paragraph xl:text-base">
+                  {{ $t('Kemasukan Terus: Terbuka untuk graduan Degree/ Ijazah Sarjana Muda') }}
+                </li>
+                <li data-aos="fade-up" class="text-sm paragraph xl:text-base">
+                  {{
+                    $t(
+                      'Kemasukan APEL: Terbuka untuk graduan STPM atau Diploma, berumur 30 tahun ke atas, dengan 5 tahun pengalaman kerja'
+                    )
+                  }}
+                </li>
+                <li data-aos="fade-up" class="text-sm paragraph xl:text-base">
+                  {{ $t('Kemasukan Micro Credentials: Tiada syarat kelayakan masuk. Terbuka untuk semua.') }}
+                </li>
+              </ol>
             </div>
           </div>
 
           <!-- Lecturer -->
           <div id="lecturer" class="space-y-8 pt-28 lg:pt-32 sm:space-y-6">
-            <h2 data-aos="fade-up" class="text-4xl font-semibold text-header-gradient">Lecturer</h2>
+            <h2 data-aos="fade-up" class="text-4xl font-semibold text-header-gradient">{{ $t('Pensyarah') }}</h2>
             <div class="space-y-6">
               <p data-aos="fade-up" class="text-sm paragraph xl:text-base">
-                <b>Faizal Jusri</b>
+                <b>Dr. Syed Helmy bin Syed Abu Bakar, PhD</b>
               </p>
 
-              <p data-aos="fade-up" class="text-sm paragraph xl:text-base">
-                <em>
-                  PhD in Business (International University of Malaya-Wales), MBA (University of Southern Queensland)
-                </em>
-              </p>
-
-              <p data-aos="fade-up" class="text-sm paragraph xl:text-base">
-                With two decades of experience, Faizal Jusri has established a robust foundation in training and
-                successfully led diverse professional teams in the realm of learning design and delivery. His profound
-                expertise in marketing benefits the upcoming generation of marketing professionals.
-              </p>
+              <ul class="space-y-8 sm:space-y-4">
+                <LandingListItem data-aos="fade-up" :title="$t('Pengalaman 28 tahun dalam kepimpinan pendidikan')" />
+                <LandingListItem data-aos="fade-up" :title="$t('Dari pensyarah hingga Naib Canselor')" />
+                <LandingListItem
+                  data-aos="fade-up"
+                  :title="$t('Pakar dalam pengambilan pelajar, kecemerlangan akademik, dan pembangunan institusi')"
+                />
+                <LandingListItem
+                  data-aos="fade-up"
+                  :title="$t('Ahli Lembaga Penasihat untuk Education Malaysia Global Service (EMGS')"
+                />
+                <LandingListItem
+                  data-aos="fade-up"
+                  :title="$t('Bersemangat dalam pendidikan berkualiti dan pertumbuhan mampan')"
+                />
+              </ul>
             </div>
           </div>
 
           <!-- FAQs -->
           <div id="faqs" data-aos="fade-up" data-aos-easing="linear" class="col-span-12 pt-28 lg:pt-32">
-            <h2 class="mb-10 text-3xl font-semibold sm:text-4xl sm:mb-6">Frequently asked questions</h2>
+            <h2 class="mb-10 text-3xl font-semibold sm:text-4xl sm:mb-6">{{ $t('Soalan Lazim') }}</h2>
 
             <ul class="shadow-box">
-              <BaseAccordion v-for="(accordion, index) in faqs" :key="index" :accordion="accordion" />
+              <BaseAccordion
+                v-for="(accordion, index) in faqs"
+                :key="index"
+                data-aos="fade-up"
+                :accordion="accordion"
+              />
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="w-full my-24">
+    <!-- CTA: HIDDEN -->
+    <section v-if="false" class="w-full my-24">
       <div class="relative grid max-w-screen-xl grid-cols-12 px-8 mx-auto gap-x-6">
         <div data-aos="zoom-in-right" data-aos-easing="linear" class="col-span-12 lg:col-span-6">
           <div class="w-full">
@@ -303,14 +247,14 @@
               class="max-w-full px-8 py-4 bg-gradient-to-r from-[#468ef9] to-[#0c66ee] border border-[#0c66ee] text-white"
               href="#download-programme-guide"
             >
-              Download a Programme Guide
+              {{ $t('Muat Turun') }} {{ $t('Panduan Program') }}
             </BaseButton>
             <BaseButton
               class="max-w-full px-6 py-4 bg-inherit text-gradient border border-[#0c66ee] flex items-center justify-center"
             >
               <a href="tel:+60193792803" class="flex items-center">
                 <img :src="require('~/assets/img/icons/phone.svg')" class="w-6 h-6 mr-2 rounded-lg" />
-                Schedule a Call
+                {{ $t('Dapatkan info') }}
               </a>
             </BaseButton>
           </div>
@@ -318,17 +262,25 @@
       </div>
     </section>
 
+    <!-- Back to top -->
     <div class="flex justify-center w-full my-10">
-      <a
+      <BaseButton
+        v-smooth-scroll
+        class="max-w-full px-8 py-4 bg-gradient-to-r from-[#468ef9] to-[#0c66ee] border border-[#0c66ee] text-white"
+        href="#download-programme-guide"
+      >
+        {{ $t('Muat Turun') }} {{ $t('Panduan Program') }}
+      </BaseButton>
+      <!-- <a
         v-smooth-scroll
         data-aos="flip-down"
         data-aos-delay="150"
         href="#top"
         class="px-6 py-3 flex items-center space-x-2 bg-[#FAFAFA] hover:bg-gray-100 hover:shadow-md border border-[#DDDDDD] rounded-md text-gray-700"
       >
-        <span>Back to top</span>
+        <span>{{ $t('Kembali ke atas') }}</span>
         <ArrowUpIcon :size="20" />
-      </a>
+      </a> -->
     </div>
   </div>
 </template>
@@ -338,85 +290,106 @@ import aosMixin from '@/mixins/aos'
 export default {
   name: 'IndexPage',
   mixins: [aosMixin],
-  data() {
-    return {
-      keyFactsPartial: [
+  computed: {
+    keyFactsPartial() {
+      return [
         {
-          text: 'Delivery',
-          label: 'Online',
+          text: this.$t('Mod'),
+          label: this.$t('Online'),
           img: 'monitor.svg',
         },
         {
-          text: 'Study Level',
-          label: 'Postgraduate',
+          text: this.$t('Tahap'),
+          label: this.$t('Postgraduate'),
           img: 'institution.svg',
         },
         {
-          text: 'Programme Type',
-          label: "Master's",
+          text: this.$t('Jenis Program'),
+          label: this.$t("Master's"),
           img: 'graduation-cap.svg',
         },
         {
-          text: 'Programme Key Facts',
-          label: '<a v-smooth-scroll href="#key-facts" class="underline text-gradient">View all</a>',
+          text: this.$t('Fakta Utama Program'),
+          label: `<a v-smooth-scroll href="#key-facts" class="underline text-gradient">${this.$t('Lihat semua')}</a>`,
           img: 'institution.svg',
         },
-      ],
-      keyFactsAll: [
+      ]
+    },
+    keyFactsAll() {
+      return [
         {
-          text: 'Delivery',
-          label: 'Online',
+          text: this.$t('Mod'),
+          label: this.$t('Online'),
           img: 'monitor.svg',
         },
         {
-          text: 'Study Level',
-          label: 'Postgraduate',
+          text: this.$t('Tahap'),
+          label: this.$t('Postgraduate'),
           img: 'institution.svg',
         },
         {
-          text: 'Programme Type',
-          label: "Master's",
+          text: this.$t('Jenis Program'),
+          label: this.$t("Master's"),
           img: 'graduation-cap.svg',
         },
         {
-          text: 'Duration',
-          label: '2 years (Part time)',
+          text: this.$t('Tempoh'),
+          label: '12 months',
           img: 'calendar.svg',
         },
         {
-          text: 'Modules',
+          text: this.$t('Jumlah Modul'),
           label: '12',
           img: 'book.svg',
         },
         {
-          text: 'Price Per Module',
-          label: 'MYR 2,250',
+          text: this.$t('Yuran Per Modul'),
+          label: 'RM 1,250',
           img: 'dollar.svg',
         },
         {
-          text: 'Intake',
-          label: '5th August, 2024 <br>23rd September, 2024',
+          text: this.$t('Intake'),
+          label: this.$t('Sabtu pertama setiap bulan'),
           img: 'calendar-plus.svg',
         },
-      ],
-      faqs: [
+      ]
+    },
+    faqs() {
+      return [
         {
-          title: 'Is getting an MBA worth it? ',
-          description:
-            "Yes. An MBA can enhance your leadership skills, earning potential, and the business opportunities that come your way. It's an investment in your future that equips you with valuable knowledge and connections to keep up with the rapidly changing world of business.",
+          title: this.$t('Adakah program MBA sepenuhnya dalam talian (online)?'),
+          description: this.$t(
+            'Ya, program MBA kami adalah sepenuhnya dalam talian, membolehkan anda belajar dari mana-mana di dunia pada masa yang sesuai untuk anda.'
+          ),
         },
         {
-          title: 'What can I learn with an MBA?',
-          description:
-            'You will gain knowledge in the various business fundamentals, from management to research skills to analytics to ethics. By the end of the programme, you should have a new business network, greater confidence in your leadership skills, and a holistic understanding of modern business practices.',
+          title: this.$t('Berapa tempoh program MBA?'),
+          description: this.$t(
+            'Biasanya, program MBA kami boleh diselesaikan dalam tempoh satu tahun dengan pengajian fleksibel, direka khas untuk profesional yang bekerja.'
+          ),
         },
         {
-          title: "Is it okay if I don't have a diploma/bachelor's degree?",
-          description:
-            "For Malaysian non-degree holders with at least a Diploma or STPM certificate, you will need to obtain the MQA Accreditation of Prior Experiential Learning, APEL.A certificate for approved course admission. <br><br>Speak to our Education Counsellors to learn more about the entry requirements <a class='cursor-pointer text-gradient' target='_blank' href='#'>here (todo: link to whatsapp)</a>",
+          title: this.$t('Apakah syarat kemasukan yang diperlukan?'),
+          description: `${this.$t(
+            'Untuk memohon, anda perlu memiliki ijazah sarjana atau yang setara (Direct Entry), atau individu berumur 30 tahun ke atas, memiliki STPM atau Diploma, dan pengalaman kerja selama 5 tahun (APEL Entry). Tiada syarat kemasukan untuk (Micro Credentials Entry), terbuka kepada semua! Butir-butir spesifik boleh didapati dalam panduan Program kami.'
+          )} <a v-smooth-scroll class='cursor-pointer text-gradient' href='#download-programme-guide'>${this.$t(
+            'Muat turun di sini'
+          )}</a>`,
         },
-      ],
-    }
+        {
+          title: this.$t('Bolehkah saya bekerja sambil belajar MBA?'),
+          description: this.$t(
+            'Tentu saja! Jadual yang fleksibel kami direka untuk profesional yang sibuk. Ramai pelajar kami terus bekerja sepenuh masa semasa menyelesaikan pengajian MBA mereka.'
+          ),
+        },
+        {
+          title: this.$t('Berapakah yuran pengajian dan pilihan pembayaran yang tersedia?'),
+          description: this.$t(
+            'Yuran pengajian kami kompetitif dan direka untuk memenuhi bajet anda. (Bayar per modul). Kami menawarkan pelan pembayaran yang fleksibel untuk memudahkan pembiayaan pendidikan anda. Pengeluaran EPF/KWSP juga tersedia.'
+          ),
+        },
+      ]
+    },
   },
 }
 </script>

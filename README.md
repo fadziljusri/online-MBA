@@ -1,8 +1,8 @@
-# Online MBA By Faizal Jusri Landing Page
+# MBA Services By Faizal Jusri Landing Page
 
 Free landing page template built using Nuxt 2 and Tailwindcss 3
 
-> [LIVE DEMO](https://mbaonline.netlify.app/)
+> [LIVE DEMO](https://mbaservices.netlify.app/)
 
 ![Thumbnail](assets/img/thumbnail.jpg)
 
