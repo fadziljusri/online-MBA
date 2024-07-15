@@ -193,7 +193,7 @@
                 />
                 <LandingListItem
                   data-aos="fade-up"
-                  :title="$t('Ahli Lembaga Penasihat untuk Education Malaysia Global Service (EMGS')"
+                  :title="$t('Ahli Lembaga Penasihat untuk Education Malaysia Global Service (EMGS)')"
                 />
                 <LandingListItem
                   data-aos="fade-up"
